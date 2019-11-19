@@ -3,7 +3,6 @@ import React,{Component} from 'react';
 import Result from './components/RandomNumber/Result/Result'
 
 import './App.css';
-
 class App extends Component {
   state={
     num1:"",
@@ -11,7 +10,8 @@ class App extends Component {
     sum:"",
     message:"",
     answer:"",
-    correct:true
+    isCorrect:true,
+    isRefresh:false
   }
 
   componentDidMount(){
@@ -35,42 +35,49 @@ class App extends Component {
       let c= a+b 
       if(value==c){
         this.setState({
-          message:"Superb! you got it."
+          message:"Superb! you got it.",
+          isRefresh:true
         })
       }
       else{
         this.setState({
           message:"OOps!This is inCorrect.",
           answer: c,
-          correct:false
+          isCorrect:false,
+          isRefresh:true
         })
       }
     }
 
     refreshPage=()=>{
       window.location.reload(false);
+     
     }
 
   render(){
+    let correctMessage =(<h3>{this.state.message}</h3>)
     let incorrectMessage =(<h3>{this.state.message} <br/> The correct answer is {this.state.answer}.</h3>)
   return (
     <div className="App">
        <h2>React Card App</h2>
        <div className="flexContainer">
        {/* <RandomNumber /> */}
-       {this.state.num1}
-       <span > + </span>
-       {this.state.num2}
+       <span className="number">{this.state.num1}</span>
+       <span className="operator" > + </span>
+       <span className="number">{this.state.num2}</span>
        {/* <RandomNumber /> */}
-       <span > = </span>
+       <span className="operator" > = </span>
        <Result change={this.onChangeHandler}
                click={()=>{this.clickHandler(this.state.num1,this.state.num2,this.state.sum)}}
                />       
-       </div>    
-        {this.state.correct ?  <h3>{this.state.message} </h3>: <h3>{incorrectMessage} </h3>}
-      
-      <button  onClick={this.refreshPage}>NEXT</button> 
-           </div>
+       </div>       
+       {this.state.isCorrect ?<h3>{correctMessage} </h3>: <h3>{incorrectMessage} </h3>}
+       {this.state.isRefresh ?<button  onClick={this.refreshPage}>NEXT</button>: null}
+
+        
+        
+           
+        </div>
   );
 }
 }
