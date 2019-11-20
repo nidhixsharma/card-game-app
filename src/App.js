@@ -36,8 +36,9 @@ class App extends Component {
       if(value==c){
         this.setState({
           message:"Superb! you got it.",
-          isRefresh:true
+       
         })
+        window.location.reload(false);
       }
       else{
         this.setState({
@@ -73,7 +74,7 @@ class App extends Component {
                />       
              
        {this.state.isCorrect ?<h3>{correctMessage} </h3>: <h3>{incorrectMessage} </h3>}
-       {this.state.isRefresh ?<button  onClick={this.refreshPage}>NEXT</button>: null}
+       {this.state.isRefresh ?<button onClick ={this.refreshPage}>NEXT</button>:null}
 
         
         

@@ -1,7 +1,9 @@
 .App {
   text-align: center;
   height:100vh;
-  width:100vw;
+  overflow-y:hidden;
+  width:100%;
+  overflow: none;
   background-color: rgb(252, 228, 228);
   color:rgb(58, 58, 240);
 
@@ -18,7 +20,7 @@ h1{
   align-items: center;
   height:25vh;
   width:80vw;
-  margin:0.2rem auto 1.5rem auto;
+  margin:0.2rem auto 0.2rem auto;
   padding:0.2rem;
   /* border: 2px solid red; */
   
