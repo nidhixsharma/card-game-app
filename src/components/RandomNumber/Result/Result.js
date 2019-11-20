@@ -6,7 +6,7 @@ const Result =(props)=>{
    return( 
    <div>
       <div >
-        <input className="inputBox" type= "text" value={props.result} placeholder="" name="sum"  onChange={props.change}/>
+        <input className="inputBox" type= "text" value={props.result} autofocus="true" placeholder="" name="sum"  onChange={props.change}/>
         </div>
         <div>
            <button  onClick={props.click}>SUBMIT</button>

@@ -4,27 +4,45 @@
   width:100vw;
   background-color: rgb(252, 228, 228);
   color:rgb(58, 58, 240);
-}
 
+}
+h1{
+  font-family:serif;
+  font-weight: bold;
+  color:rgb(71, 190, 71)
+
+}
 .flexContainer{
   display:flex;
   justify-content: center;;
   align-items: center;
-  height:40vh;
+  height:25vh;
   width:80vw;
-  margin:1.5rem;
-  padding:0.5rem;
+  margin:0.2rem auto 1.5rem auto;
+  padding:0.2rem;
   /* border: 2px solid red; */
   
 }
-.number{
+.number1{
   color: black;
   text-align:center;
   font-weight:bold;
   font-size:5rem;
   margin:0.5rem;
   /* border: 2px solid red; */
+  transform: scaleX(1.5) ;
+ 
 
+}
+
+.number2{
+  color: black;
+  text-align:center;
+  font-weight:bold;
+  font-size:5rem;
+  margin:0.5rem;
+  /* border: 2px solid red; */
+  transform: scaleX(1.5) ;
 }
 .operator{
   color: black;
@@ -32,4 +50,5 @@
   font-weight:bold;
   font-size:2rem;
   margin:0.5rem;
+  display:inline-block
   }
