@@ -60,7 +60,7 @@ class App extends Component {
     let incorrectMessage =(<h3>{this.state.message} <br/> The correct answer is {this.state.answer}.</h3>)
   return (
     <div className="App">
-       <h1>React Card GameApp</h1>
+       <h1>Card GameApp</h1>
        <div className="flexContainer">
        {/* <RandomNumber /> */}
        <span className="number1">{this.state.num1}</span>
