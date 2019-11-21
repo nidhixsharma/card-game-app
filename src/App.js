@@ -60,12 +60,25 @@ class App extends Component {
     let correctMessage =(<h3>{this.state.message}</h3>)
     let incorrectMessage =(<h3>{this.state.message} <br/> The correct answer is {this.state.answer}.</h3>)
   return (
+<<<<<<< HEAD
     <div className="App">   
      <h1>React Card GameApp</h1>
       <AddNumbers num1={this.state.num1}
                   num2={this.state.num2}
 
                  />
+=======
+    <div className="App">
+       <h1>Card GameApp</h1>
+       <div className="flexContainer">
+       {/* <RandomNumber /> */}
+       <span className="number1">{this.state.num1}</span>
+       <span className="operator" > + </span>
+       <span className="number2">{this.state.num2}</span>
+       {/* <RandomNumber /> */}
+       <span className="operator" > = </span>
+       </div>
+>>>>>>> d5c3e87ef57ec7dafc6237e7ce8d27c80a94d940
        <Result change={this.onChangeHandler}
                click={()=>{this.clickHandler(this.state.num1,this.state.num2,this.state.sum)}}
                />   
